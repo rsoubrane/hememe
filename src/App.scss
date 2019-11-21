@@ -1,0 +1,219 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Covered+By+Your+Grace&display=swap");
+@font-face {
+	font-family: "MainFont";
+	src: url("./assets/fonts/HelveticaRoundedLTStd-BdCnO.otf");
+}
+@font-face {
+	font-family: "SecondaryFont";
+	src: url("./assets/fonts/HelveticaRoundedLTStd-BdCn.otf");
+}
+
+.App {
+	height: 100%;
+	width: 100vw;
+	margin: 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.section {
+	position: relative;
+	height: 100%;
+	width: 100vw;
+	text-align: center;
+	background-color: #e7d000 !important;
+}
+
+.section-top {
+	height: 100vh;
+	/* height: calc(100vh - 60px); */
+	color: #d40074;
+}
+
+.section-vote {
+	z-index: 2;
+	background-color: #d40074 !important;
+	color: #e7d000;
+}
+
+.section-bottom {
+	height: 100vh;
+	color: #d40074;
+}
+
+.title-call {
+	font-family: "Covered By Your Grace";
+	width: 300px;
+	position: absolute;
+	bottom: 7%;
+	left: 50%;
+	transform: translate(-50%, -5%);
+	font-size: 24px;
+}
+
+.section-title {
+	font-family: "MainFont";
+	padding-top: 80px;
+	font-size: 72px;
+	text-transform: uppercase;
+}
+
+.title-description {
+	font-family: "SecondaryFont";
+	width: 50%;
+	margin-top: 50px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	color: black;
+	font-size: 25px;
+	line-height: 30px;
+	text-align: center;
+}
+
+form {
+	margin-top: 1%;
+}
+
+.form-bottom {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+input {
+	text-indent: 20px !important;
+	width: 370px;
+	height: 40px;
+	background: #ffffff;
+	border: none;
+	border-radius: 50px;
+}
+
+::placeholder,
+::-webkit-input-placeholder,
+::-moz-placeholder {
+	font-family: Helvetica Rounded LT Std, Helvetica, sans-serif;
+	opacity: 30% !important;
+}
+
+.input-text-top {
+	color: #d40074 !important;
+}
+.input-text-top::placeholder {
+	color: #d40074 !important;
+	opacity: 30%;
+}
+.input-text-bottom {
+	color: #3e2b7a !important;
+}
+.input-text-bottom::placeholder {
+	color: #3e2b7a !important;
+	opacity: 30%;
+}
+
+.submit-button {
+	overflow: hidden;
+	height: 40px;
+	width: 125px;
+	color: #fff;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 50px !important;
+	margin-left: -40px !important;
+}
+.top {
+	background: #d40074;
+}
+.bottom {
+	background: #3e2b7a;
+}
+
+.meme-pouce {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+@media only screen and (max-width: 768px) {
+	.meme-pouce,
+	.meme-joyeuse {
+		visibility: hidden;
+	}
+}
+
+.meme-texte {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: Helvetica Rounded LT Std;
+	background-color: white;
+	border-radius: 20px;
+	padding: 35px;
+	width: 530px;
+	height: 100%;
+	font-size: 25px;
+	line-height: 45px;
+	color: #18005c;
+}
+
+.meme-texte:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 70%;
+	width: 0;
+	height: 0;
+	border: 46px solid transparent;
+	border-right-color: #fff;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -23px;
+	margin-left: -46px;
+}
+
+.title-instagram {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: "Covered By Your Grace";
+	width: 80%;
+	font-size: 35px;
+	line-height: 47px;
+	text-align: center;
+	color: #fff;
+}
+
+.slider {
+	position: relative;
+	left: 25%;
+	transform: translateX(-20%);
+	width: 80% !important;
+}
+
+// Footer
+footer {
+	height: 60px;
+	background-color: #18005c;
+	color: #fff;
+}
+footer a {
+	font-family: Helvetica Rounded LT Std;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 22px;
+	text-align: center;
+	margin: auto 20px;
+	color: #fff !important;
+}
+.container-links {
+	text-align: right;
+	position: relative;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}

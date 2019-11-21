@@ -1,0 +1,63 @@
+.Toaster__manager-top-right {
+	/* top: 65px !important; */
+	text-decoration: none;
+}
+
+.notification {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.notification-inner {
+	height: 60px;
+	overflow: hidden;
+	width: 300px;
+	position: relative;
+	box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.notification-body {
+	z-index: 100;
+	height: 100%;
+	color: #3d4b50;
+	padding-left: 70px;
+	text-decoration: none;
+}
+
+.notification-icon {
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+	background: #fff;
+	position: absolute;
+	top: 50%;
+	left: 12px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transform: translate(0, -50%);
+}
+
+.notification-body-header {
+	font-weight: 600;
+	font-size: 14.5px;
+	padding-top: 10px;
+	letter-spacing: 0.45px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.notification-body-content {
+	font-weight: 400;
+	font-size: 12.5px;
+	letter-spacing: 0.38px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
