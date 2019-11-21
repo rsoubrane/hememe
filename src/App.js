@@ -1,24 +1,21 @@
 import React from "react";
 
-import Notifications from "./components/Notifications";
-import SectionTop from "./components/SectionTop";
-import SectionVote from "./components/SectionVote";
-import SectionBottom from "./components/SectionBottom";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import LandingPage from "./pages/LandingPage";
+import HomePage from "./pages/HomePage";
 
 import "./App.scss";
 
-const App = () => {
+function App() {
 	return (
-		<div className='App'>
-			<Notifications />
-			<SectionTop />
-			<SectionVote />
-			<SectionBottom />
-
-			<Footer />
-		</div>
+		<Router>
+			<Switch>
+				<Route exact path='/' component={LandingPage} />
+				<Route path='/home' component={HomePage} />
+			</Switch>
+		</Router>
 	);
-};
+}
 
 export default App;

@@ -5,8 +5,16 @@
 	src: url("./assets/fonts/HelveticaRoundedLTStd-BdCnO.otf");
 }
 @font-face {
+	font-family: "Dosis";
+	@import url("https://fonts.googleapis.com/css?family=Dosis&display=swap");
+}
+@font-face {
 	font-family: "SecondaryFont";
 	src: url("./assets/fonts/HelveticaRoundedLTStd-BdCn.otf");
+}
+.navbar {
+	height: 60px;
+	background-color: #3e2b7a;
 }
 
 .App {
@@ -26,7 +34,7 @@
 }
 
 .section-top {
-	height: 100vh;
+	height: 100%;
 	/* height: calc(100vh - 60px); */
 	color: #d40074;
 }
@@ -38,31 +46,32 @@
 }
 
 .section-bottom {
-	height: 100vh;
+	height: 100%;
 	color: #d40074;
 }
 
 .title-call {
 	font-family: "Covered By Your Grace";
+	color: #fff;
 	width: 300px;
-	position: absolute;
-	bottom: 7%;
+	position: relative;
 	left: 50%;
-	transform: translate(-50%, -5%);
+	transform: translate(-50%);
 	font-size: 24px;
 }
 
 .section-title {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 	font-family: "MainFont";
-	padding-top: 80px;
 	font-size: 72px;
 	text-transform: uppercase;
 }
 
 .title-description {
-	font-family: "SecondaryFont";
-	width: 50%;
-	margin-top: 50px;
+	font-family: "Dosis";
+	width: 40%;
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
@@ -73,13 +82,15 @@
 }
 
 form {
+	position: relative;
+	z-index: 1;
 	margin-top: 1%;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .form-bottom {
 	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
 }
 
 input {
@@ -89,13 +100,15 @@ input {
 	background: #ffffff;
 	border: none;
 	border-radius: 50px;
+	outline: none;
 }
 
 ::placeholder,
 ::-webkit-input-placeholder,
 ::-moz-placeholder {
-	font-family: Helvetica Rounded LT Std, Helvetica, sans-serif;
-	opacity: 30% !important;
+	color: #d40074 !important;
+	opacity: 1 !important;
+	font-family: "Dosis", Helvetica, sans-serif;
 }
 
 .input-text-top {
@@ -103,18 +116,16 @@ input {
 }
 .input-text-top::placeholder {
 	color: #d40074 !important;
-	opacity: 30%;
+	opacity: 0.3;
 }
 .input-text-bottom {
 	color: #3e2b7a !important;
 }
 .input-text-bottom::placeholder {
 	color: #3e2b7a !important;
-	opacity: 30%;
+	opacity: 0.3;
 }
-
 .submit-button {
-	overflow: hidden;
 	height: 40px;
 	width: 125px;
 	color: #fff;
@@ -122,6 +133,7 @@ input {
 	border: none;
 	border-radius: 50px !important;
 	margin-left: -40px !important;
+	outline: none !important;
 }
 .top {
 	background: #d40074;
@@ -129,23 +141,132 @@ input {
 .bottom {
 	background: #3e2b7a;
 }
-
-.meme-pouce {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	-webkit-transform: scale(0.9);
-	transform: scale(0.9);
+.modal-input {
+	text-indent: 20px !important;
+	width: 70%;
+	height: 40px;
+	background: #ffffff;
+	border: 1px solid #3e2b7a;
+	border-radius: 50px;
+	outline: none;
+}
+.modal-submit {
+	height: 40px;
+	width: 20%;
+	margin-left: 5%;
+	border: 1px solid #3e2b7a;
+	border-radius: 50px !important;
+	outline: none !important;
+	color: #fff;
+	background: #3e2b7a;
+}
+.modal-header {
+	border: none;
 }
 
-@media only screen and (max-width: 768px) {
-	.meme-pouce,
-	.meme-joyeuse {
-		visibility: hidden;
+.card {
+	background-color: rgba(255, 255, 255, 0) !important;
+	border: none !important;
+}
+
+.card-image {
+	position: relative;
+}
+
+.image-product {
+	width: 70% !important;
+	height: auto;
+	margin: auto 10%;
+}
+@media only screen and (min-width: 860px) {
+	.image-product {
+		width: 80% !important;
+		margin: auto 10%;
 	}
 }
 
-.meme-texte {
+.overlay-text {
+	font-family: Helvetica Rounded LT Std;
+	color: white;
+	opacity: 0;
+	font-size: 1em;
+	position: absolute;
+	width: 90%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: justify;
+	user-select: none;
+	transition: 0.4s ease;
+}
+
+.card-image {
+	&:hover {
+		.image-overlay {
+			opacity: 1;
+		}
+		.overlay-text {
+			opacity: 1;
+		}
+	}
+}
+
+.image-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: 0.4s ease;
+	background: rgba(0, 0, 0, 0.7);
+	filter: blur(4px);
+	border-radius: 10px;
+}
+
+.card-title {
+	text-transform: uppercase;
+	font-family: Helvetica Rounded LT Std;
+	height: 50px;
+	font-style: italic;
+	font-size: 22px;
+	text-align: center;
+	color: #ffffff;
+	margin: 0 10% 5%;
+	user-select: none;
+}
+
+.card-button {
+	background-color: transparent;
+	height: 40px;
+	width: 60%;
+	border: 2px #18005c solid;
+	border-radius: 42px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 28px;
+	text-align: center;
+	color: #18005c;
+	outline: none !important;
+}
+
+.card-button:hover {
+	transition: 0.4s ease;
+	background-color: #18005c;
+	color: #fff;
+}
+
+.meme-pouce {
+	position: absolute;
+	bottom: -10%;
+	left: 10%;
+	transform: scale(0.8);
+}
+
+.meme-text {
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
@@ -153,14 +274,14 @@ input {
 	background-color: white;
 	border-radius: 20px;
 	padding: 35px;
-	width: 530px;
+	max-width: 500px;
 	height: 100%;
 	font-size: 25px;
 	line-height: 45px;
 	color: #18005c;
 }
 
-.meme-texte:after {
+.meme-text:after {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -187,28 +308,51 @@ input {
 	color: #fff;
 }
 
+.arobas {
+	color: #d40074;
+}
+.arobas:hover {
+	cursor: pointer;
+}
 .slider {
 	position: relative;
 	left: 25%;
 	transform: translateX(-20%);
 	width: 80% !important;
 }
+.slick-arrow,
+.slick-prev,
+.slick-next {
+	color: #18005c !important;
+}
+.img-slider {
+	padding: 10px;
+}
 
 // Footer
 footer {
+	position: absolute;
+	width: 100vw;
 	height: 60px;
 	background-color: #18005c;
 	color: #fff;
+	overflow: hidden;
+	margin: 0;
+	z-index: 10;
 }
-footer a {
+footer a,
+.nav-link {
 	font-family: Helvetica Rounded LT Std;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 15px;
 	line-height: 22px;
 	text-align: center;
-	margin: auto 20px;
+	margin: auto 15px;
 	color: #fff !important;
+}
+.nav-link {
+	text-transform: uppercase;
 }
 .container-links {
 	text-align: right;
@@ -216,4 +360,61 @@ footer a {
 	right: 0;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 768px) {
+	.logo {
+		transform: scale(0.7);
+	}
+	.main-title {
+		font-size: 40px;
+		padding: 0;
+	}
+	.title-description {
+		position: relative;
+		width: 85%;
+		margin: 5% 0;
+		font-size: 16px;
+	}
+	.title-call {
+		font-size: 18px;
+	}
+	input,
+	.input-text-bottom {
+		width: 80vw;
+		font-size: 0.85em;
+		margin-bottom: 5%;
+	}
+	.submit-button {
+		margin: 5% 0 !important;
+		height: 30px;
+	}
+	.meme-pouce,
+	.meme-joyeuse {
+		visibility: hidden;
+	}
+	.overlay-text {
+		font-size: 0.62em;
+	}
+	.card-title {
+		width: 100%;
+		height: 65px !important;
+		margin: 0;
+		font-size: 18px !important;
+	}
+	.card-button {
+		width: 80%;
+		margin-top: auto;
+	}
+	.meme-text {
+		width: 75%;
+		font-size: 18px;
+		line-height: 25px;
+		padding: 20px;
+		margin: 10% 0;
+	}
+	.meme-text:after {
+		border: 23px solid transparent;
+		margin-left: -23px;
+	}
 }

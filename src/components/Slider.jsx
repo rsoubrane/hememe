@@ -6,7 +6,7 @@ const SliderComponent = () => {
 	const settings = {
 		lazyLoad: true,
 		infinite: true,
-		slidesToShow: 3,
+		slidesToShow: 4,
 		slidesToScroll: 1,
 		autoplay: true,
 		autoplaySpeed: 3000,
@@ -23,7 +23,7 @@ const SliderComponent = () => {
 	};
 
 	return (
-		<Slider {...settings} className='slider'>
+		<Slider {...settings} className='slider my-3'>
 			<img
 				className='img-slider'
 				src='https://firebasestorage.googleapis.com/v0/b/hememe-0000.appspot.com/o/slideshow%2Fs1.jpg?alt=media&token=19fc688d-bec2-443e-a448-c38c90804d08'
