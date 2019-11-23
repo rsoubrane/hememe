@@ -2,8 +2,6 @@ import React from "react";
 
 import { Card as BootstrapCard } from "react-bootstrap";
 
-import Box from "../../assets/images/méditation.png";
-
 const Card = props => {
 	const infos = props;
 
@@ -14,7 +12,7 @@ const Card = props => {
 	return (
 		<BootstrapCard>
 			<div className='card-image'>
-				<BootstrapCard.Img src={Box} className='image-product' />
+				<BootstrapCard.Img src={infos.imgSrc} className='image-product' />
 				<div className='image-overlay' />
 				<div className='overlay-text'>{infos.description}</div>
 			</div>

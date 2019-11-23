@@ -94,6 +94,7 @@ form {
 }
 
 input {
+	font-family: "Dosis", Helvetica, sans-serif;
 	text-indent: 20px !important;
 	width: 370px;
 	height: 40px;
@@ -112,20 +113,25 @@ input {
 }
 
 .input-text-top {
+	font-family: "Dosis", Helvetica, sans-serif;
 	color: #d40074 !important;
 }
 .input-text-top::placeholder {
+	font-family: "Dosis", Helvetica, sans-serif;
 	color: #d40074 !important;
 	opacity: 0.3;
 }
 .input-text-bottom {
+	font-family: "Dosis", Helvetica, sans-serif;
 	color: #3e2b7a !important;
 }
 .input-text-bottom::placeholder {
+	font-family: "Dosis", Helvetica, sans-serif;
 	color: #3e2b7a !important;
 	opacity: 0.3;
 }
 .submit-button {
+	font-family: "Dosis", Helvetica, sans-serif;
 	height: 40px;
 	width: 125px;
 	color: #fff;
@@ -178,29 +184,6 @@ input {
 	height: auto;
 	margin: auto 10%;
 }
-@media only screen and (min-width: 860px) {
-	.image-product {
-		width: 80% !important;
-		margin: auto 10%;
-	}
-}
-
-.overlay-text {
-	font-family: Helvetica Rounded LT Std;
-	color: white;
-	opacity: 0;
-	font-size: 1em;
-	position: absolute;
-	width: 90%;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	text-align: justify;
-	user-select: none;
-	transition: 0.4s ease;
-}
 
 .card-image {
 	&:hover {
@@ -226,6 +209,38 @@ input {
 	border-radius: 10px;
 }
 
+.overlay-text {
+	font-family: Helvetica Rounded LT Std;
+	color: white;
+	opacity: 0;
+	font-size: 1em;
+	position: absolute;
+	width: 90%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: justify;
+	user-select: none;
+	transition: 0.4s ease;
+}
+
+@media only screen and (min-width: 1400px) {
+	.image-product {
+		width: 65% !important;
+		height: auto;
+		margin: auto 12.5%;
+	}
+	.image-overlay {
+		width: 70% !important;
+		margin: 0 15%;
+	}
+	.overlay-text {
+		width: 60%;
+	}
+}
+
 .card-title {
 	text-transform: uppercase;
 	font-family: Helvetica Rounded LT Std;
@@ -241,7 +256,7 @@ input {
 .card-button {
 	background-color: transparent;
 	height: 40px;
-	width: 60%;
+	width: 30%;
 	border: 2px #18005c solid;
 	border-radius: 42px;
 	font-style: normal;
@@ -261,7 +276,7 @@ input {
 
 .meme-pouce {
 	position: absolute;
-	bottom: -10%;
+	bottom: -20%;
 	left: 10%;
 	transform: scale(0.8);
 }

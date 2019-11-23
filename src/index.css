@@ -1,8 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Covered+By+Your+Grace&display=swap");
+@font-face {
+	font-family: "MainFont";
+	src: url("./assets/fonts/HelveticaRoundedLTStd-BdCnO.otf");
+}
+@font-face {
+	font-family: "Dosis";
+	@import url("https://fonts.googleapis.com/css?family=Dosis&display=swap");
+}
+@font-face {
+	font-family: "SecondaryFont";
+	src: url("./assets/fonts/HelveticaRoundedLTStd-BdCn.otf");
+}
+
 html,
 body {
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-		"Droid Sans", "Helvetica Neue", sans-serif;
+	font-family: "Dosis", "Helvetica", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	scroll-behavior: smooth;

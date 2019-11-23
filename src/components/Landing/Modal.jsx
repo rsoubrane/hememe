@@ -28,30 +28,53 @@ function MyModal(props) {
 				window.location.href = "/";
 			});
 	};
+	console.log(localStorage.getItem("email"));
+
 	return (
 		<Modal {...props} size='md' aria-labelledby='contained-modal-title-center' centered>
 			{props.vote ? (
 				<>
 					<Modal.Header closeButton>
-						<Modal.Title id='contained-modal-title-center'>
-							J'ai besoin de ton email pour valider ...
-						</Modal.Title>
+						{localStorage.getItem("email") ? (
+							<Modal.Title id='contained-modal-title-center'>Valides ton email ...</Modal.Title>
+						) : (
+							<Modal.Title id='contained-modal-title-center'>
+								J'ai besoin de ton email pour valider ...
+							</Modal.Title>
+						)}
 					</Modal.Header>
 					<Modal.Body>
 						<form onSubmit={handleSubmit(onSubmit)} className='mt-4 mb-md-5'>
-							<input
-								className='modal-input'
-								placeholder='Renseigne ton email !'
-								type='email'
-								name='email'
-								id='email'
-								ref={register({
-									required: "J'ai besoin de ton email",
-									pattern: {
-										value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
-									}
-								})}
-							/>
+							{localStorage.getItem("email") ? (
+								<input
+									className='modal-input'
+									placeholder='Renseigne ton email !'
+									type='email'
+									name='email'
+									id='email'
+									value={localStorage.getItem("email")}
+									ref={register({
+										required: "J'ai besoin de ton email",
+										pattern: {
+											value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+										}
+									})}
+								/>
+							) : (
+								<input
+									className='modal-input'
+									placeholder='Renseigne ton email !'
+									type='email'
+									name='email'
+									id='email'
+									ref={register({
+										required: "J'ai besoin de ton email",
+										pattern: {
+											value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+										}
+									})}
+								/>
+							)}
 							<button className='modal-submit' type='submit'>
 								Valider
 							</button>

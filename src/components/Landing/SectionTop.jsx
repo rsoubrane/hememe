@@ -45,6 +45,7 @@ export default function SectionTop() {
 			.catch(error => {
 				setModalShow(true);
 			});
+		localStorage.setItem("email", data.email);
 		console.log(email);
 	};
 
@@ -56,9 +57,9 @@ export default function SectionTop() {
 			<Image src={meme} className='meme-joyeuse' alt='Mémé joyeuse' fluid />
 			<h1 className='section-title main-title mt-md-5'>Tu peux m'aider ?</h1>
 			<p className='title-description mt-md-3'>
-				Découvre les kits d’essentiels que mémé a concocté spécialement pour t’aider à te lancer dans une
-				nouvelle activité ou un nouveau challenge. Elle les a bien sûr tous testés car le plus important pour
-				elle est que tu ailles bien !
+				Découvre les kits essentiels que mémé a concocté spécialement pour t’aider à te lancer dans une nouvelle
+				activité ou un nouveau challenge. Elle les a bien sûr tous testés car le plus important pour elle est
+				que tu ailles bien !
 			</p>
 
 			<form onSubmit={handleSubmit(onSubmit)} className='mt-4 mb-md-5'>
