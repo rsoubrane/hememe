@@ -5,8 +5,6 @@ import "toasted-notes/src/styles.css"; // optional styles
 
 import Profile from "../assets/images/notifications.png";
 
-import "../styles/Notifications.scss";
-
 const Notifications = () => {
 	const [messages] = useState([
 		{ notification: "Bonjour mon petit" },

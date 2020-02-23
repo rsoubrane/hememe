@@ -1,0 +1,63 @@
+.section-bottom {
+	position: relative;
+	height: 100%;
+	top: 0;
+	background: #e7d000 !important;
+	z-index: 3;
+}
+
+.meme-pouce {
+	position: absolute;
+	bottom: -20%;
+	left: 10%;
+	transform: scale(0.8);
+}
+
+.meme-text {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: Helvetica Rounded LT Std;
+	background-color: white;
+	border-radius: 20px;
+	padding: 35px;
+	max-width: 500px;
+	height: 100%;
+	font-size: 25px;
+	line-height: 45px;
+	color: #18005c;
+}
+
+.meme-text:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 70%;
+	width: 0;
+	height: 0;
+	border: 46px solid transparent;
+	border-right-color: #fff;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -23px;
+	margin-left: -46px;
+}
+
+.title-instagram {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: "Covered By Your Grace";
+	width: 80%;
+	font-size: 35px;
+	line-height: 47px;
+	text-align: center;
+	color: #fff;
+}
+
+.arobas {
+	color: #d40074;
+}
+.arobas:hover {
+	cursor: pointer;
+}

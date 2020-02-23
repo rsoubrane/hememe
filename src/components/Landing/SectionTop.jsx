@@ -21,9 +21,7 @@ import Logo from "../../assets/images/logo2.png";
 import meme from "../../assets/images/mémé_joyeuse.png";
 
 //Styles
-import "../../App.scss";
 import "../../styles/section-top.scss";
-import "../../styles/Chevron.scss";
 
 export default function SectionTop() {
 	const [modalShow, setModalShow] = useState(false);

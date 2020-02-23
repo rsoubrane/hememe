@@ -7,7 +7,6 @@ import HomePage from "./pages/HomePage";
 
 //Styles
 import "./App.scss";
-import "./styles/footer.scss";
 
 function App() {
 	return (

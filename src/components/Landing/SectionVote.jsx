@@ -8,10 +8,9 @@ import Card from "./Card";
 import Modal from "./Modal";
 
 //Firebase
-import db from "../../firestore.js";
 import cards from "./data.json";
+
 //Styles
-import "../../App.scss";
 import "../../styles/section-vote.scss";
 
 export default function SectionVote() {

@@ -12,7 +12,7 @@ import Modal from "./Modal";
 import meme from "../../assets/images/meme_pouce.png";
 
 //Styles
-import "../../App.scss";
+import "../../styles/section-bottom.scss";
 
 export default function SectionBottom() {
 	const [modalShow, setModalShow] = useState(false);

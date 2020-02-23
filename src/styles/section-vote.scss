@@ -91,6 +91,21 @@
 						}
 					}
 
+					@media only screen and (min-width: 1400px) {
+						.image-product {
+							width: 65% !important;
+							height: auto;
+							margin: auto 12.5%;
+						}
+						.image-overlay {
+							width: 70% !important;
+							margin: 0 15%;
+						}
+						.overlay-text {
+							width: 60%;
+						}
+					}
+
 					.card-image {
 						&:hover {
 							.image-overlay {
