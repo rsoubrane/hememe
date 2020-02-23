@@ -1,0 +1,33 @@
+// Footer
+footer {
+	position: absolute;
+	width: 100vw;
+	height: 60px;
+	background-color: #18005c;
+	color: #fff;
+	overflow: hidden;
+	margin: 0;
+	z-index: 10;
+
+	a,
+	.nav-link {
+		font-family: Helvetica Rounded LT Std;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 15px;
+		line-height: 22px;
+		text-align: center;
+		margin: auto 15px;
+		color: #fff !important;
+	}
+	.nav-link {
+		text-transform: uppercase;
+	}
+	.container-links {
+		text-align: right;
+		position: relative;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}

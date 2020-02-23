@@ -22,7 +22,7 @@ import meme from "../../assets/images/mémé_joyeuse.png";
 
 //Styles
 import "../../App.scss";
-import "../../styles/SectionTop.scss";
+import "../../styles/section-top.scss";
 import "../../styles/Chevron.scss";
 
 export default function SectionTop() {
@@ -50,21 +50,20 @@ export default function SectionTop() {
 	};
 
 	return (
-		<div className='section section-top pt-5'>
+		<div className='section section-top'>
 			<Modal show={modalShow} onHide={() => setModalShow(false)} />
 
-			<Image src={Logo} className='logo mt-md-5' alt='Logo' fluid />
+			<Image src={Logo} className='logo' alt='Logo' fluid />
 			<Image src={meme} className='meme-joyeuse' alt='Mémé joyeuse' fluid />
-			<h1 className='section-title main-title mt-md-5'>Tu peux m'aider ?</h1>
-			<p className='title-description mt-md-3'>
+			<h1 className='section-title main-title'>Tu peux m'aider ?</h1>
+			<p className='title-description'>
 				Découvre les kits essentiels que mémé a concocté spécialement pour t’aider à te lancer dans une nouvelle
 				activité ou un nouveau challenge. Elle les a bien sûr tous testés car le plus important pour elle est
 				que tu ailles bien !
 			</p>
 
-			<form onSubmit={handleSubmit(onSubmit)} className='mt-4 mb-md-5'>
+			<form onSubmit={handleSubmit(onSubmit)}>
 				<input
-					className='input-text-top'
 					placeholder='On se donne des nouvelles bientôt ?'
 					type='email'
 					name='email'
@@ -79,6 +78,7 @@ export default function SectionTop() {
 				<button className='submit-button top' type='submit'>
 					Oui !
 				</button>
+
 				<br />
 				{errors.email && errors.email.message}
 			</form>

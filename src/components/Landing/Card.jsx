@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Card as BootstrapCard } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
-const Card = props => {
+const VoteCard = props => {
 	const infos = props;
 
 	const returnId = () => {
@@ -10,14 +10,16 @@ const Card = props => {
 	};
 
 	return (
-		<BootstrapCard>
+		<Card>
 			<div className='card-image'>
-				<BootstrapCard.Img src={infos.imgSrc} className='image-product' />
-				<div className='image-overlay' />
+				<Card.Img src={infos.imgSrc} className='image-product' />
+				<div className='image-overlay'></div>
 				<div className='overlay-text'>{infos.description}</div>
 			</div>
-			<BootstrapCard.Body>
-				<BootstrapCard.Title>{infos.title}</BootstrapCard.Title>
+			<Card.Body>
+				<Card.Title>
+					Kit <span className='yellow'>{infos.title}</span>
+				</Card.Title>
 				<button
 					className='card-button'
 					onClick={() => {
@@ -25,9 +27,9 @@ const Card = props => {
 					}}>
 					Voter
 				</button>
-			</BootstrapCard.Body>
-		</BootstrapCard>
+			</Card.Body>
+		</Card>
 	);
 };
 
-export default Card;
+export default VoteCard;
