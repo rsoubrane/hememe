@@ -11,7 +11,6 @@ import Footer from "../components/Footer";
 //Images
 import Box from "../assets/images/box_méditation.png";
 import Meme from "../assets/images/meme_photo.png";
-import MemeMesssage from "../assets/images/album_meme.png";
 
 //Styles
 import "../styles/HomePage.scss";

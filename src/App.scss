@@ -13,23 +13,22 @@
 	src: url("./assets/fonts/HelveticaRoundedLTStd-BdCn.otf");
 }
 
+html,
+body {
+	box-sizing: border-box;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
 .navbar {
 	height: 60px;
 	background-color: #3e2b7a;
 }
 
-.App {
-	height: 100%;
-	width: 100vw;
-	margin: 0;
-	overflow: hidden;
-	scroll-behavior: smooth;
-}
-
 .section {
 	position: relative;
-	height: 100%;
-	width: 100vw;
 	text-align: center;
 	font-family: "Dosis";
 }

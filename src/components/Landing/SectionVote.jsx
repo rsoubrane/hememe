@@ -34,7 +34,7 @@ export default function SectionVote() {
 				</p>
 
 				<div className='details-products'>
-					<Row className='mx-sm-2 py-3 pb-5'>
+					<Row className='mx-sm-2 py-3'>
 						{cards.map((card, index) => (
 							<Col key={index} xs={4} className='product-card'>
 								<Card

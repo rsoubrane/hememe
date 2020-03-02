@@ -41,10 +41,11 @@ const Notifications = () => {
 				),
 				{
 					position: "top-right", // top-left, top, top-right, bottom-left, bottom, bottom-right
-					duration: 8000 //null if unlimited
+					duration: 6000 //null if unlimited
 				}
 			);
 		}, count);
+		return console.log(count);
 	});
 };
 

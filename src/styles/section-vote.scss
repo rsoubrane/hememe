@@ -1,13 +1,12 @@
 .section-vote {
 	position: relative;
-	height: 100%;
 	background: #d40074 !important;
 	color: #e7d000;
 	z-index: 2;
 
 	.vote-details {
 		position: relative;
-		padding-top: 80px;
+		padding: 80px 0;
 
 		.details-title {
 			height: 78px;
@@ -37,7 +36,7 @@
 				width: 320px;
 				height: 400px;
 				padding-right: 80px;
-				margin-bottom: 40px;
+				margin-top: 40px;
 
 				.card {
 					position: relative;
