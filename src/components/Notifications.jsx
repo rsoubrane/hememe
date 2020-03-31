@@ -26,7 +26,7 @@ const Notifications = () => {
 
 	return messages.map(message => {
 		count += 3000;
-		setTimeout(() => {
+		return setTimeout(() => {
 			toaster.notify(
 				({ onClose }) => (
 					<div className='notification' onClick={onClose}>
@@ -45,7 +45,6 @@ const Notifications = () => {
 				}
 			);
 		}, count);
-		return console.log(count);
 	});
 };
 

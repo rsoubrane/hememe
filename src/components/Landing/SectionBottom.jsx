@@ -21,7 +21,6 @@ export default function SectionBottom() {
 	const { handleSubmit, register, errors } = useForm();
 	const onSubmit = () => {
 		const myProposition = document.getElementById("proposition").value;
-		console.log("myProposition: ", myProposition);
 		setChoice(myProposition);
 		setModalShow(true);
 	};
@@ -58,19 +57,21 @@ export default function SectionBottom() {
 					{errors.proposition && errors.proposition.message}
 				</form>
 
-				<div className='title-instagram'>
-					Viens-voir mon album photo :{" "}
-					<a
-						href='https://www.instagram.com/hememe.fr/'
-						target='_blank'
-						rel='noopener noreferrer'
-						className='arobas'>
-						@hememe.fr
-					</a>
-				</div>
+				<div className='container-slider mb-5'>
+					<div className='title-instagram'>
+						Viens-voir mon album photo :{" "}
+						<a
+							href='https://www.instagram.com/hememe.fr/'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='arobas'>
+							@hememe.fr
+						</a>
+					</div>
 
-				<div className='slider'>
-					<Slider />
+					<div className='slider'>
+						<Slider />
+					</div>
 				</div>
 			</div>
 		</div>

@@ -44,7 +44,6 @@ export default function SectionTop() {
 				setModalShow(true);
 			});
 		localStorage.setItem("email", data.email);
-		console.log(email);
 	};
 
 	return (

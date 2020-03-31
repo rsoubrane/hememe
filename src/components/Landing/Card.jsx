@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
 const VoteCard = props => {
 	const infos = props;
@@ -20,13 +20,13 @@ const VoteCard = props => {
 				<Card.Title>
 					Kit <span className='yellow'>{infos.title}</span>
 				</Card.Title>
-				<button
+				<Button
 					className='card-button'
 					onClick={() => {
 						returnId();
 					}}>
 					Voter
-				</button>
+				</Button>
 			</Card.Body>
 		</Card>
 	);

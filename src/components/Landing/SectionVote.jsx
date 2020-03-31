@@ -27,7 +27,7 @@ export default function SectionVote() {
 			<Modal show={modalShow} vote={choice} onHide={() => setModalShow(false)} />
 
 			<div className='vote-details'>
-				<h1 className='details-title'>Place au vote</h1>
+				<h1 className='main-title details-title'>Place au vote</h1>
 				<p className='details-description'>
 					“Hé mémé !”, te propose de découvrir des kits d’outils essentiels pour vivre au mieux tes premières
 					expériences ou débuter un loisir.
@@ -36,7 +36,7 @@ export default function SectionVote() {
 				<div className='details-products'>
 					<Row className='mx-sm-2 py-3'>
 						{cards.map((card, index) => (
-							<Col key={index} xs={4} className='product-card'>
+							<Col key={index} xs={12} md={6} xl={4} className='product-card'>
 								<Card
 									title={card.title}
 									description={card.description}

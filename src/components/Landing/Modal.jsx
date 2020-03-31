@@ -9,8 +9,6 @@ import db from "../../firestore.js";
 import useForm from "react-hook-form";
 
 function MyModal(props) {
-	console.log(props);
-
 	const { handleSubmit, register, errors } = useForm();
 
 	const onSubmit = email => {
@@ -24,11 +22,9 @@ function MyModal(props) {
 			.doc()
 			.set(data)
 			.then(() => {
-				console.log(data);
 				window.location.href = "/";
 			});
 	};
-	console.log(localStorage.getItem("email"));
 
 	return (
 		<Modal {...props} size='md' aria-labelledby='contained-modal-title-center' centered>
