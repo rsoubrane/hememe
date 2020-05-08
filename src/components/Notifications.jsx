@@ -26,7 +26,7 @@ const Notifications = () => {
 
 	return messages.map(message => {
 		count += 3000;
-		return setTimeout(() => {
+		setTimeout(() => {
 			toaster.notify(
 				({ onClose }) => (
 					<div className='notification' onClick={onClose}>
